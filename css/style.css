@@ -35,3 +35,19 @@
     background-color: #ffcc00;
     color: black !important;
   }
+
+
+  .btn-primary{
+    color: #0e2842 !important;
+    border-color: #003366 !important;
+  }
+
+  .btn-primary:hover {
+    background-color: #002244 !important;
+    border-color: #002244 !important;
+}
+
+
+
+
+/* HERO SECTION */
