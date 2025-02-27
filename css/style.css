@@ -1,10 +1,15 @@
+body{
+  background-color: #f6f6f6;
+}
+
+
 .navbar {
-    background-color: #003366 !important; /* Azul escuro */
+    background-color: #3b72f6 !important; /* Azul escuro */
     padding: 15px;
   }
   
   .navbar-brand {
-    color: white !important;
+    color: #f6f6f6 !important;
     font-size: 1.5rem;
     font-weight: bold;
   }
@@ -47,6 +52,13 @@
     border-color: #002244 !important;
 }
 
+.container {
+  color: #f6f6f6 !important;
+}
+
+#bg-main{
+  background-color: #222222 !important;
+}
 
 
 
