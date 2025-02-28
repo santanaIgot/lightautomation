@@ -112,8 +112,6 @@ main {
   flex-direction: row-reverse; /* Inverte a ordem dos elementos */
 }
 
-/* Estilos do texto */
-/* Estiliza a seção principal */
 main {
   padding: 60px 0;
 }
@@ -164,8 +162,9 @@ main {
 
 /* Estiliza o botão */
 .btn-primary {
-  background-color: var(--yellow-01);
-  border-color: var(--yellow-01);
+  background-color: var(--blue-01);
+  border:none;
+  border-radius: 0.25rem;
   padding: 12px 24px;
   font-size: 1rem;
   font-weight: 600;
@@ -174,35 +173,14 @@ main {
 }
 
 .btn-primary:hover {
-  background-color: var(--yellow-02);
-  border-color: var(--yellow-02);
-}
-
-/* Variáveis de cores */
-:root {
-  --yellow-01: #fcdc4d;
-  --black-01: #222222;
-  --blue-01: #3b72f6;
-  --gray-01: #f6f6f6;
-}
-
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Corpo da página */
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--gray-01);
+  background-color: var(--yellow-01);
   color: var(--black-01);
 }
 
+
 /* Estiliza a seção principal */
 main {
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 /* Estilos gerais para os conteúdos */
@@ -218,6 +196,7 @@ main {
 .content:nth-child(1) {
   background-color: var(--gray-01); /* Fundo branco */
   flex-direction: row; /* Texto na esquerda, imagem na direita */
+  
 }
 
 /* Segundo conteúdo (Imagem à esquerda, Texto à direita) */
@@ -306,12 +285,6 @@ main {
   border-radius: 8px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .content,
-  .content-reverse {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 5%;
-  }
-}
+
+
+
