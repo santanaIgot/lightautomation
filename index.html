@@ -1,119 +1,104 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Light Automation</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-   
+    <meta charset="UTF-8" />
+    <title>Automação Residencial</title>
+    <!-- Torna o layout responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="container-fluid p-0">
-      <nav class="navbar navbar-expand-lg">
+    <header class="container-header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
-          <a href="#" class="navbar-brand">Light Automation</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand fw-bold text-uppercase" href="#">MinhaMarca</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto"> <!-- Alinha os links à direita -->
+
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a href="#" class="nav-link active">Home</a>
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Início</a
+                >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Serviços</a>
+                <a class="nav-link" href="#">Serviços</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Contato</a>
+                <a class="nav-link" href="#">Projetos</a>
               </li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
-                  Mais
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a href="#" class="dropdown-item">Sobre nós</a></li>
-                  <li><a href="#" class="dropdown-item">Blog</a></li>
-                  <li><a href="#" class="dropdown-item">Ajuda</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contato</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    <div class="container-fluid p-5" id="bg-main">
-      <main class="container" >
-        <section class="row align-items-center">
-          <div class="col-md-6">
-            <h1 class="fw-bold">Controle Inteligente da Sua Casa</h1>
-            <p class="lead">Gerencie suas luzes e dispositivos eletrônicos de forma eficiente e sustentável com nossa solução de automação residencial.</p>
-            <button class="btn btn-primary btn-lg">Saiba Mais</button>
+
+      <!-- HERO SECTION -->
+      <section class="hero-section d-flex align-items-center">
+        <!-- Overlay opcional para melhor legibilidade -->
+        <div class="hero-overlay"></div>
+
+        <div class="container text-center text-white">
+          <h1 class="display-4 fw-bold mb-3">Automação Inteligente</h1>
+          <p class="lead mb-4">
+            Otimize tarefas, economize tempo e viva o futuro na sua cozinha.
+          </p>
+          <a href="#" class="btn btn-hero"> Saiba Mais </a>
+        </div>
+      </section>
+
+      <main>
+        <!-- Primeiro bloco (Texto à esquerda, Imagem à direita) -->
+        <section class="content">
+          <div class="text">
+            <h1>Transforme sua Energia</h1>
+            <h2>Uma solução para um futuro sustentável</h2>
+            <p>Descubra como otimizar o uso de energias renováveis em comunidades remotas com nossa tecnologia inovadora.</p>
+            <button class="btn-primary">Saiba Mais</button>
           </div>
-          <div class="col-md-6">
-            <img src="/images/automacao-residencial-inovacoes-5.jpg" class="img-fluid rounded shadow-lg" alt="Automação Residencial">
+          <div class="image">
+            <img src="./images/proj-01.png" alt="Imagem ilustrativa">
           </div>
         </section>
-      </main> 
-    </div>
-     
-     <section class="container my-5">
-      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center border shadow-lg">
-        <div class="col-lg-7">
-          <div class="lc-block-3">
-            <div editable="rich">
-              <h1 class="fw-bold display-4">Soluções <br>inteligentes</h2>
-              <h2 class="">Qualidade e competência</h2>
-            </div>
+      
+        <!-- Segundo bloco (Imagem à esquerda, Texto à direita) -->
+        <section class="content content-reverse">
+          <div class="image">
+            <img src="./images/sustenta.svg" alt="Imagem ilustrativa">
           </div>
-          <div class="lc-block my-3">
-            <div editable="rich">
-              <p class="lead">
-                Trabalhamos do começo ao fim para entender e entregar para os nossos clientes sempre a 
-                experiência que ele procura em cada aplicação.
-              </p>
-            </div>
-          <div class="lc-block d-grid gap-2 d-md-flex justify-content-md-start">
-            <button class="btn btn-primary btn-lg">Saiba Mais</button>
+          <div class="text">
+            <h1>Energia Sustentável</h1>
+            <h2>O futuro da eletricidade limpa</h2>
+            <p>Conheça nossas soluções inovadoras para um mundo mais sustentável e ecológico.</p>
+            <button class="btn-primary">Descubra Agora</button>
           </div>
-        </div>
-        </div>
-        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
-          <div class="lc-block">
-            <img src="./images/proj-01.png" alt="" class="rounded-start w-100">
-          </div>
-        </div>
-      </div>
-     </section>
-     <section class="container my-5">
-      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center border shadow-lg">
-        <div class="col-lg-4 p-0 overflow-hidden">
-          <div class="lc-block">
-            <img src="./images/sustenta.svg" alt="" class="rounded-start w-100">
-          </div>
-        </div>
-        <div class="col-lg-7 offset-lg-1">
-          <div class="lc-block-3">
-            <div editable="rich">
-              <h1 class="fw-bold display-4">Soluções <br>inteligentes</h1>
-              <h2 class="">Qualidade e competência</h2>
-            </div>
-          </div>
-          <div class="lc-block my-3">
-            <div editable="rich">
-              <p class="lead">
-                Trabalhamos do começo ao fim para entender e entregar para os nossos clientes sempre a 
-                experiência que ele procura em cada aplicação.
-              </p>
-            </div>
-          </div>
-          <div class="lc-block d-grid gap-2 d-md-flex justify-content-md-start">
-            <button class="btn btn-primary btn-lg">Saiba Mais</button>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      </main>
+      
+      
+      
     </header>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
