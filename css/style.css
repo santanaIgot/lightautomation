@@ -1,65 +1,317 @@
-body{
-  background-color: #f6f6f6;
+/* Variáveis de cores */
+:root {
+  --yellow-01: #fcdc4d;
+  --black-01: #222222;
+  --blue-01: #3b72f6;
+  --gray-01: #f6f6f6;
 }
 
-
-.navbar {
-    background-color: #3b72f6 !important; /* Azul escuro */
-    padding: 15px;
-  }
-  
-  .navbar-brand {
-    color: #f6f6f6 !important;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  .nav-link {
-    color: white !important;
-    font-size: 1.1rem;
-    transition: 0.3s;
-  }
-
-  .nav-link:hover {
-    color: #ffcc00 !important; /* Amarelo no hover */
-  }
-
-  .navbar-toggler {
-    border: none;
-  }
-
-  .dropdown-menu {
-    background-color: #003366; /* Mantém o fundo azul */
-  }
-
-  .dropdown-item {
-    color: white !important;
-  }
-
-  .dropdown-item:hover {
-    background-color: #ffcc00;
-    color: black !important;
-  }
-
-
-  .btn-primary{
-    color: #0e2842 !important;
-    border-color: #003366 !important;
-  }
-
-  .btn-primary:hover {
-    background-color: #002244 !important;
-    border-color: #002244 !important;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-  color: #f6f6f6 !important;
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--gray-01);
+  color: var(--black-01);
+}
+.container-header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative; /* Garante que os elementos posicionados internamente (como a overlay) sejam referenciados a este container */
+  overflow: hidden;   /* Opcional: evita que elementos excedentes "vazem" do container */
 }
 
-#bg-main{
-  background-color: #222222 !important;
+/* Navbar Links */
+.navbar-brand {
+  color: var(--black-01) !important;
 }
-
-
+.navbar-nav .nav-link {
+  color: var(--black-01) !important;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--blue-01) !important;
+}
 
 /* HERO SECTION */
+.hero-section {
+  position: relative;
+  min-height: 100vh; /* Faz a seção ocupar a tela inteira */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../images/pexels-kindelmedia-9028873.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+/* Overlay para escurecer/clarear a imagem e destacar texto */
+.hero-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.4); /* Ajuste a opacidade conforme necessário */
+  z-index: 1;
+}
+
+/* Container do texto fica acima do overlay */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Botão Hero */
+.btn-hero {
+  background-color: var(--blue-01);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: var(--yellow-01);
+  color: var(--black-01);
+}
+
+
+/*CONTENT*/
+
+/* Estiliza a seção principal */
+main {
+  padding: 60px 0;
+}
+
+/* Estilos gerais para os conteúdos */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+}
+
+/* Primeiro conteúdo (texto à esquerda, imagem à direita) */
+.content:first-child {
+  background-color: #fff; /* Fundo branco */
+}
+
+/* Segundo conteúdo (imagem à esquerda, texto à direita) */
+.content:nth-child(2) {
+  background-color: #222222; /* Fundo escuro */
+  flex-direction: row-reverse; /* Inverte a ordem dos elementos */
+}
+
+/* Estilos do texto */
+/* Estiliza a seção principal */
+main {
+  padding: 60px 0;
+}
+
+/* Estilos gerais para os conteúdos */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+}
+
+/* Primeiro conteúdo (Texto à esquerda, Imagem à direita) */
+.content:first-child {
+  background-color: #fff;
+  flex-direction: row;
+}
+
+/* Segundo conteúdo (Imagem à esquerda, Texto à direita) */
+.content:nth-child(2) {
+  background-color: #222222;
+  flex-direction: row-reverse; /* Inverte a ordem */
+}
+
+/* Estilos do texto */
+.text {
+  max-width: 500px;
+  color: #fff;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--blue-01);
+}
+
+.text h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--yellow-01);
+}
+
+.text p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Estiliza o botão */
+.btn-primary {
+  background-color: var(--yellow-01);
+  border-color: var(--yellow-01);
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--yellow-02);
+  border-color: var(--yellow-02);
+}
+
+/* Variáveis de cores */
+:root {
+  --yellow-01: #fcdc4d;
+  --black-01: #222222;
+  --blue-01: #3b72f6;
+  --gray-01: #f6f6f6;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--gray-01);
+  color: var(--black-01);
+}
+
+/* Estiliza a seção principal */
+main {
+  padding: 60px 0;
+}
+
+/* Estilos gerais para os conteúdos */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+}
+
+/* Primeiro conteúdo (Texto à esquerda, Imagem à direita) */
+.content:nth-child(1) {
+  background-color: var(--gray-01); /* Fundo branco */
+  flex-direction: row; /* Texto na esquerda, imagem na direita */
+}
+
+/* Segundo conteúdo (Imagem à esquerda, Texto à direita) */
+.content:nth-child(2) {
+  background-color: #222222; /* Fundo escuro */
+  flex-direction: row-reverse; /* Inverte para imagem ficar à esquerda */
+}
+
+/* Estilos do texto */
+.text {
+  max-width: 500px;
+}
+
+.content:nth-child(1) .text {
+  color: var(--black-01);
+}
+
+.content:nth-child(2) .text {
+  color: #fff;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--blue-01);
+}
+
+.text h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--yellow-01);
+}
+
+.text p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Estilos gerais para os conteúdos */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+}
+
+/* Primeiro conteúdo (Texto à esquerda, Imagem à direita) */
+.content {
+  background-color: #fff;
+}
+
+/* Segundo conteúdo (Imagem à esquerda, Texto à direita) */
+.content-reverse {
+  background-color: #222222;
+  flex-direction: row-reverse; /* Inverte a ordem */
+}
+
+/* Estilos do texto */
+.text {
+  max-width: 500px;
+  color: #fff;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--blue-01);
+}
+
+.text h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--yellow-01);
+}
+
+.text p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Estiliza a imagem */
+.image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .content,
+  .content-reverse {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+}
