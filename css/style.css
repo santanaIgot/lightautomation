@@ -179,9 +179,7 @@ main {
 
 
 /* Estiliza a seção principal */
-main {
-  padding: 100px 0;
-}
+
 
 /* Estilos gerais para os conteúdos */
 .content {
@@ -286,5 +284,9 @@ main {
 }
 
 
+/* ---------------------------- FOOTER --------------------------------------------- */
 
+.footer-one{
+  background-color: var(--gray-01);
+}
 
