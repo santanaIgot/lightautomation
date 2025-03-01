@@ -1,0 +1,15 @@
+.banner {
+    background: url('../images/image_8.jpg') center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  .benefits .card {
+    transition: transform 0.3s;
+  }
+  .benefits .card:hover {
+    transform: scale(1.05);
+  }
