@@ -1,292 +1,138 @@
-/* Variáveis de cores */
-:root {
-  --yellow-01: #fcdc4d;
-  --black-01: #222222;
-  --blue-01: #3b72f6;
-  --gray-01: #f6f6f6;
-}
-
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Corpo da página */
+/* 🔹 Estilos Gerais */
 body {
-  font-family: Arial, sans-serif;
-  background-color: var(--gray-01);
-  color: var(--black-01);
-}
-.container-header {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative; /* Garante que os elementos posicionados internamente (como a overlay) sejam referenciados a este container */
-  overflow: hidden;   /* Opcional: evita que elementos excedentes "vazem" do container */
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #f8f9fa;
 }
 
-/* Navbar Links */
+/* 🔹 Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+}
+
 .navbar-brand {
-  color: var(--black-01) !important;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
+
 .navbar-nav .nav-link {
-  color: var(--black-01) !important;
+  color: #f8f9fa;
+  transition: 0.3s;
 }
+
 .navbar-nav .nav-link:hover {
-  color: var(--blue-01) !important;
+  color: #0dcaf0;
 }
 
-/* HERO SECTION */
-.hero-section {
+/* 🔹 HERO SECTION */
+.hero {
   position: relative;
-  min-height: 100vh; /* Faz a seção ocupar a tela inteira */
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: url('../images/pexels-kindelmedia-9028873.jpg') center center no-repeat;
-  background-size: cover;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(120deg, #0a0a0a, #1c1c1c);
+  overflow: hidden;
 }
 
-/* Overlay para escurecer/clarear a imagem e destacar texto */
-.hero-overlay {
-  content: "";
+/* .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
+} */
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #0dcaf0;
+  color: #0dcaf0;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-hero:hover {
+  background: #0dcaf0;
+  color: #121212;
+}
+
+/* 🔹 FOOTER */
+.footer-area {
+  background: #181818;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-area h4 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.footer-area .social-icons a {
+  font-size: 24px;
+  color: #f8f9fa;
+  transition: 0.3s;
+}
+
+.footer-area .social-icons a:hover {
+  color: #0dcaf0;
+}
+
+
+
+
+
+.services {
+  background-color: #181818;
+  color: #f8f9fa;
+}
+
+.service-card {
+  background: #212121;
+  color: #f8f9fa;
+  border: none;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.2);
+}
+
+.service-icon {
+  font-size: 40px;
+  color: #0dcaf0;
+  margin-bottom: 10px;
+}
+
+
+.content {
+  background: url('../images/image_section.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(34, 34, 34, 0.4); /* Ajuste a opacidade conforme necessário */
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-/* Container do texto fica acima do overlay */
-.hero-section .container {
+.content h2, .content p {
   position: relative;
   z-index: 2;
 }
-
-/* Botão Hero */
-.btn-hero {
-  background-color: var(--blue-01);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 0.25rem;
-  transition: background-color 0.3s ease;
-}
-
-.btn-hero:hover {
-  background-color: var(--yellow-01);
-  color: var(--black-01);
-}
-
-
-/*CONTENT*/
-
-/* Estiliza a seção principal */
-main {
-  padding: 60px 0;
-}
-
-/* Estilos gerais para os conteúdos */
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 10%;
-}
-
-/* Primeiro conteúdo (texto à esquerda, imagem à direita) */
-.content:first-child {
-  background-color: #fff; /* Fundo branco */
-}
-
-/* Segundo conteúdo (imagem à esquerda, texto à direita) */
-.content:nth-child(2) {
-  background-color: #222222; /* Fundo escuro */
-  flex-direction: row-reverse; /* Inverte a ordem dos elementos */
-}
-
-main {
-  padding: 60px 0;
-}
-
-/* Estilos gerais para os conteúdos */
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 10%;
-}
-
-/* Primeiro conteúdo (Texto à esquerda, Imagem à direita) */
-.content:first-child {
-  background-color: #fff;
-  flex-direction: row;
-}
-
-/* Segundo conteúdo (Imagem à esquerda, Texto à direita) */
-.content:nth-child(2) {
-  background-color: #222222;
-  flex-direction: row-reverse; /* Inverte a ordem */
-}
-
-/* Estilos do texto */
-.text {
-  max-width: 500px;
-  color: #fff;
-}
-
-.text h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--blue-01);
-}
-
-.text h2 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--yellow-01);
-}
-
-.text p {
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-/* Estiliza o botão */
-.btn-primary {
-  background-color: var(--blue-01);
-  border:none;
-  border-radius: 0.25rem;
-  padding: 12px 24px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-  background-color: var(--yellow-01);
-  color: var(--black-01);
-}
-
-
-/* Estiliza a seção principal */
-
-
-/* Estilos gerais para os conteúdos */
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 10%;
-}
-
-/* Primeiro conteúdo (Texto à esquerda, Imagem à direita) */
-.content:nth-child(1) {
-  background-color: var(--gray-01); /* Fundo branco */
-  flex-direction: row; /* Texto na esquerda, imagem na direita */
-  
-}
-
-/* Segundo conteúdo (Imagem à esquerda, Texto à direita) */
-.content:nth-child(2) {
-  background-color: #222222; /* Fundo escuro */
-  flex-direction: row-reverse; /* Inverte para imagem ficar à esquerda */
-}
-
-/* Estilos do texto */
-.text {
-  max-width: 500px;
-}
-
-.content:nth-child(1) .text {
-  color: var(--black-01);
-}
-
-.content:nth-child(2) .text {
-  color: #fff;
-}
-
-.text h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--blue-01);
-}
-
-.text h2 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--yellow-01);
-}
-
-.text p {
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-/* Estilos gerais para os conteúdos */
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 60px 10%;
-}
-
-/* Primeiro conteúdo (Texto à esquerda, Imagem à direita) */
-.content {
-  background-color: #fff;
-}
-
-/* Segundo conteúdo (Imagem à esquerda, Texto à direita) */
-.content-reverse {
-  background-color: #222222;
-  flex-direction: row-reverse; /* Inverte a ordem */
-}
-
-/* Estilos do texto */
-.text {
-  max-width: 500px;
-  color: #fff;
-}
-
-.text h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--blue-01);
-}
-
-.text h2 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--yellow-01);
-}
-
-.text p {
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-/* Estiliza a imagem */
-.image img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 8px;
-}
-
-
-/* ---------------------------- FOOTER --------------------------------------------- */
-
-.footer-one{
-  background-color: var(--gray-01);
-}
-

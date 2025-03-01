@@ -1,196 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Automação Residencial</title>
-    <!-- Torna o layout responsivo em dispositivos móveis -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Light Automation</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
 
-    <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="container-header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-        <div class="container">
-          <a class="navbar-brand fw-bold text-uppercase" href="#">MinhaMarca</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarContent"
-            aria-controls="navbarContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
 
-          <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Início</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Serviços</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Projetos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
-              </li>
-            </ul>
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 🔹 NAVBAR FIXA -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-uppercase" href="#">Light Automation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 HERO SECTION COM EFEITO -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="container text-center text-white">
+      <h1 class="display-3 fw-bold">Automação Inteligente</h1>
+      <p class="lead">Transforme sua casa com tecnologia e eficiência energética.</p>
+      <a href="#" class="btn btn-hero">Saiba Mais</a>
+    </div>
+  </header>
+
+  <!-- 🔹 SEÇÃO SOBRE -->
+  <section class="content position-relative text-white">
+    <div class="overlay"></div>
+    <div class="container text-center position-relative">
+      <h2 class="fw-bold">Soluções Inteligentes para um Futuro Sustentável</h2>
+      <p>Descubra como otimizar o uso de energias renováveis em sua casa e empresa.</p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE SERVIÇOS -->
+<section class="services py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold">Nossos Serviços</h2>
+    <p class="text-muted">Soluções inteligentes para automação residencial e empresarial.</p>
+    
+    <div class="row mt-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <i class="bi bi-lightbulb-fill service-icon"></i>
+            <h5 class="card-title">Automação Residencial</h5>
+            <p class="card-text">Controle iluminação, temperatura e segurança com um toque.</p>
           </div>
         </div>
-      </nav>
-
-      <!-- HERO SECTION -->
-      <section class="hero-section d-flex align-items-center">
-        <!-- Overlay opcional para melhor legibilidade -->
-        <div class="hero-overlay"></div>
-
-        <div class="container text-center text-white">
-          <h1 class="display-4 fw-bold mb-3">Automação Inteligente</h1>
-          <p class="lead mb-4">
-            Otimize tarefas, economize tempo e viva o futuro na sua cozinha.
-          </p>
-          <a href="#" class="btn btn-hero"> Saiba Mais </a>
-        </div>
-      </section>
-
-      <main class="mb-100">
-        <section class="content">
-          <div class="text">
-            <h1>Transforme sua Energia</h1>
-            <h2>Uma solução para um futuro sustentável</h2>
-            <p>Descubra como otimizar o uso de energias renováveis em comunidades remotas com nossa tecnologia inovadora.</p>
-            <button class="btn-primary">Saiba Mais</button>
-          </div>
-          <div class="image">
-            <img src="./images/proj-01.png" alt="Imagem ilustrativa">
-          </div>
-        </section>
+      </div>
       
-        <!-- Segundo bloco (Imagem à esquerda, Texto à direita) -->
-        <section class="content content-reverse">
-          <div class="image">
-            <img src="./images/sustenta.svg" alt="Imagem ilustrativa">
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <i class="bi bi-house-door-fill service-icon"></i>
+            <h5 class="card-title">Monitoramento Remoto</h5>
+            <p class="card-text">Acesse e gerencie sua casa ou empresa de qualquer lugar.</p>
           </div>
-          <div class="text">
-            <h1>Energia Sustentável</h1>
-            <h2>O futuro da eletricidade limpa</h2>
-            <p>Conheça nossas soluções inovadoras para um mundo mais sustentável e ecológico.</p>
-            <button class="btn-primary">Descubra Agora</button>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card service-card">
+          <div class="card-body">
+            <i class="bi bi-battery-charging service-icon"></i>
+            <h5 class="card-title">Eficiência Energética</h5>
+            <p class="card-text">Reduza custos e consuma energia de forma inteligente.</p>
           </div>
-        </section>
-      </main>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <footer class="footer-area footer-one">
-          <div class="footer-widget">
-            <div class="row">
-              <div class="col-xl-6 col-lg-4 col-sm-12">
-                  <div class="f-about">
-                    <div class="footer-logo">
-                      <a href="">
-                        <h1>Lightautomation</h1>
-                      </a>
-                    </div>
-                    <p class="text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                      Repudiandae, repellat?
-                    </p>
-                  </div>
-                  <div class="footer-app-store">
-                    <h5 class="download-title">Download seu app now</h5>
-                    <ul>
-                      <li>
-                        <a href="">
-                          <h4>Lightautomation</h4>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <h4>Lightautomation</h4>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-xl-2 col-lg-3 col-lg-4">
-                      <div class="footer-link">
-                        <h6 class="footer-title"> SERVICES</h6>
-                        <ul>
-                          <li><a href="">Products</a></li>
-                          <li><a href="">Bussiness</a></li>
-                          <li><a href="">Developer</a></li>
-                          <li><a href="">insights</a></li>
-                        </ul>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xl-2 col-lg-3 col-sm-4">
-                <!-- start footer contact -->
-                <div class="footer-contact">
-                  <h2 class="footer-title">Help & support</h2>
-                  <ul>
-                    <li>
-                      <i class="lni lni-map-marker"></i> Madson Street, new Yokr, Usa 
-                    </li>
-                    <li><i class="lni lni-map-marker"></i>+55 11944570122</li>
-                    <li><i class="lni lni-map-marker"></i>igoorsanttana01@gmail.com</li>
-                  </ul>
-                  <!-- end footer contact  -->
-                </div>
-              </div>
-               <!-- row -->
-            </div>
-           <!-- footer container -->
-          </div>
-          <!--footer widget  -->
+  <!-- 🔹 FOOTER -->
+  <footer class="footer-area">
+    <div class="container text-center">
+      <h4 class="fw-bold">Light <span class="text-primary">Automation</span></h4>
+      <p class="text-muted">Inovação e tecnologia para um mundo mais sustentável.</p>
+      <div class="social-icons">
+        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <p class="text-muted mt-3">© 2024 Light Automation. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-          <div class="footer-copyright">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div 
-                  class="
-                  copyright
-                  text-center
-                  d-md-flex
-                  justify-content-between
-                  align-items-center"
-                  >
-                  <p class="text">Copyright © 2024 AyroUI. All Rights Reserved</p>
-                  <ul class="social">
-                    <li>
-                      <a href="#"><i class="lni lni-map-marker"></i></a>
-                      <li>
-                        <a href=""><i class="lni lni-map-marker"></i></a>
-                      </li>
-                      <li>
-                        <a href=""><i class="lni lni-map-marker"></i></a>
-                      </li>
-                      <li>
-                        <a href=""><i class="lni lni-map-marker"></i></a>
-                      </li>
-                    </li>
-                  </ul>
-                </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </footer>
-    </header>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
 </html>
