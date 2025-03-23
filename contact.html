@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato - Light Automation</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
   <link rel="stylesheet" href="css/style.css">
 
    <!-- Google Fonts -->
@@ -17,7 +18,7 @@
 <body>
   
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top"> 
     <div class="container">
       <a class="navbar-brand fw-bold text-uppercase" href="#">Light Automation</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -47,7 +48,6 @@
       </div>
     </div>
   </nav>
-  
   <!-- Seção Contato -->
   <section class="container mt-5 pt-5">
     <h2 class="text-center fw-bold">Entre em Contato</h2>
@@ -80,16 +80,8 @@
   </footer>
   
   <!-- Scripts -->
+  <script src="js/form-handler.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      document.getElementById('formMessage').classList.remove('d-none');
-      setTimeout(() => {
-        document.getElementById('formMessage').classList.add('d-none');
-        document.getElementById('contactForm').reset();
-      }, 3000);
-    });
-  </script>
+
 </body>
 </html>
